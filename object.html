@@ -1,0 +1,39 @@
+<html>
+  <body>
+    오브젝트
+  </body>
+</html>
+<script>
+  const person = {
+    name: 'Lee',
+    age: '28',
+    birthday: '94/11/04',
+    array: [1, 2, 3],
+    // func: function() {
+    //   // console.log("객체 안에 함수");
+    //   return "객체 안에 함수"
+    // },
+    func : () => "객체 안에 함수",
+    ob: {
+      name: "객체안에 객체"
+    }
+  }
+  console.log("person 객체", person);
+  // object.key, object['key'] : 배열에서 필요한 값만 보여주기 위한 문법
+  console.log("person 이름 : ", person.name);
+  console.log("person 이름 : ", person['name']);
+  console.log("person 나이 : ", person.age);
+  console.log("person 나이 : ", person['age']);
+  console.log("person 생일 : ", person.birthday);
+  console.log("person 배열 인덱스 0 : ", person.array[0]);
+  console.log("person 배열 인덱스 1 : ", person.array[1]);
+  console.log("person 배열 인덱스 2 : ", person.array[2]);
+  console.log("person func 함수 : ", person.func());
+  // person.func();
+  console.log("person 객체안에 객체 이름 : ", person.ob.name);
+  person['data'] = 1;
+  // person.data = 2;
+  console.log(person);
+
+
+</script>

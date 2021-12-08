@@ -1,0 +1,57 @@
+<html>
+  <body>
+    함수
+  </body>
+</html>
+<script>
+  function add1(x, y) {
+    // console.log(x + y);
+    return x + y;
+  }
+  
+  const add2 = function(x, y) {
+    return x + y;
+  }
+
+  const add3 = (x, y) => {
+    return x + y;
+  }
+  
+  const add4 = (x, y) => x + y
+
+  function not1(x) {
+    return !x;
+  }
+
+  // // 함수 1단계
+  // const not2 = function(x) {
+  //   return !x;
+  // }
+  
+  // // 함수 2단계
+  // const not2 = (x) => {
+  //   return !x;
+  // }
+  
+  // // 함수 3단계
+  // const not2 = x => {
+  //   return !x;
+  // }
+
+  // // 함수 4단계
+  // const not2 = (x) => !x
+
+  // 함수 5단계
+  const not2 = x => !x;
+
+  // add(1, 2);
+  console.log("add1 function :",add1(1, 2));
+  console.log("add2 function :",add2(1, 2));
+  console.log("add3 function :",add3(1, 2));
+  console.log("add4 function :",add4(1, 2));
+  console.log("not1 function :",not1(0));
+  console.log("not1 function :",not2(!'asd'));
+
+
+  
+</script>
