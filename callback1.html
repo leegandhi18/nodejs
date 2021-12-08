@@ -1,0 +1,30 @@
+<html>
+  <body>
+    콜백 함수 - 커피
+  </body>
+</html>
+<script>
+  function buyCoffee(coffeeName, price, quantity, callback, callback1) {  // 커피를 사는 행위
+    console.log(`${coffeeName}를 ${quantity}개 구입하려합니다.`);
+    console.log(`${coffeeName} 한 개 ${price}원 입니다.`);
+
+    setTimeout(() => {
+      // return price * quantity;
+      callback(price * quantity);
+      callback1(quantity);
+    }, 1000);
+  }
+
+  // buyCoffee('카라멜 마끼아또', 5000, 3);
+
+  function pay(money) {  // 커피값 계산결과 출력 함수
+    console.log(money, "원을 지불하였습니다.");
+  }
+
+  function quantity(num) { // 주문 수량 출력 함수
+    console.log(`주문하신 수량은 ${num} 개 입니다.`);
+  }
+
+  // buyCoffee('카라멜 마끼아또', 5000, 3, pay);
+  buyCoffee('카라멜 마끼아또', 5000, 3, pay, quantity);
+</script>

@@ -1,0 +1,18 @@
+<html>
+  <body>
+    콜백 함수
+  </body>
+</html>
+<script>
+  const wait_count = (callback) => {
+    console.log('ONE');
+    setTimeout(() => {
+      console.log('TWO')
+      callback();
+    }, 1000);
+  }
+  const count3 = () => console.log('THREE');
+  
+  wait_count(count3);
+
+</script>

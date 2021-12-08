@@ -1,0 +1,47 @@
+<html>
+  <body>
+    콜백 함수 - 지옥2 and 기명함수
+  </body>
+</html>
+<script>
+  // let ramenList = '';
+  // const addSamyang = (name) => {
+    //   ramenList = name; // ramenList 값은 '삼양라면' 이다.
+    //   console.log(ramenList);
+    //   setTimeout((name) => {
+      //     // ramenList = ramenList + ', ' + name; // '삼양라면' + ', ' + '신라면'
+      //     ramenList += ', ' + name; // 위에 주석이랑 같은 표현식
+      //     console.log(ramenList); // '삼양라면, 신라면'
+      //   }, 500, '신라면');
+      // };
+  // addSamyang('삼양라면');
+      
+  // 기명함수 이용
+  let ramenList = '';
+  const addSamyang = (name) => {
+    ramenList = name; // ramenList 값은 '삼양라면' 이다.
+    console.log(ramenList);
+    setTimeout(addShin, 500, '신라면');
+  };
+
+  const addShin = (name) => {
+    ramenList += ', ' + name;
+    console.log(ramenList);
+    setTimeout(addJin, 500, '진라면');
+  };
+
+  const addJin = (name) => {
+    ramenList += ', ' + name;
+    console.log(ramenList);
+    setTimeout(addNuguri, 500, '너구리');
+  };
+
+  const addNuguri = (name) => {
+    ramenList += ', ' + name;
+    console.log(ramenList);
+  };
+
+  // addSamyang('삼양라면');
+  setTimeout(addSamyang, 500, '삼양라면');
+
+</script>

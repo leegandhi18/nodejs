@@ -1,0 +1,137 @@
+<html>
+  <body>
+    프러미스 객체
+  </body>
+</html>
+<script>
+  // 예제 1
+  // new Promise((resolve) =>{
+  //   let name = '삼양라면';
+  //   resolve(name);
+  // })
+  // .then((result) => {
+  //   console.log(result);  // '삼양라면'
+  //   return new Promise((resolve) => {
+  //     name = '진라면';
+  //     resolve(name);
+  //   })
+  // })
+  // .then((result) => {
+  //   console.log(result); // '진라면'
+  //   return new Promise((resolve) => {
+  //     name = '신라면';
+  //     resolve(name);
+  //   })
+  // .then((result) => {
+  //   console.log(result);
+  //   return new Promise((resolve) => {
+  //     name = '너구리';
+  //     resolve(name);
+  //   })
+  // })
+  // .then((result) => {
+  //   console.log(result);
+  // })
+  // })
+
+  // 예제 2
+  // let ramenList = '삼양라면';
+  // new Promise((resolve) =>{
+  //   resolve(ramenList);
+  // })
+  // .then((result) => {
+  //   console.log(result);  // '삼양라면'
+  //   return new Promise((resolve) => {
+  //     ramenList = result + ', ' + '진라면'; // 삼양라면, 진라면
+  //     resolve(ramenList); 
+  //   })
+  // })
+  // .then((result) => {
+  //   console.log(result); // '진라면'
+  //   return new Promise((resolve) => {
+  //     ramenList = result + ', ' + '신라면'; // 삼양라면, 진라면, 신라면
+  //     resolve(ramenList);
+  //   })
+  // .then((result) => {
+  //   console.log(result);
+  //   return new Promise((resolve) => {
+  //     ramenList = result + ', ' + '너구리'; // 삼양라면, 진라면, 신라면, 너구리
+  //     resolve(ramenList);
+  //   })
+  // })
+  // .then((result) => {
+  //   console.log(result);
+  // })
+  // })
+
+  // 예제 3
+  // new Promise((resolve) =>{
+  //   let ramenList = '삼양라면';
+  //   setTimeout(() => {
+  //     resolve(ramenList);
+  //   }, 500)
+  // })
+  // .then((ramenList) => {
+  //   console.log(ramenList);  // '삼양라면'
+  //   return new Promise((resolve) => {
+  //     ramenList += ', ' + '진라면'; // 삼양라면, 진라면
+  //     setTimeout(() => {
+  //       resolve(ramenList);
+  //     }, 500)
+  //   })
+  // })
+  // .then((ramenList) => {
+  //   console.log(ramenList); // '진라면'
+  //   return new Promise((resolve) => {
+  //     ramenList += ', ' + '신라면'; // 삼양라면, 진라면, 신라면
+  //     setTimeout(() => {
+  //       resolve(ramenList);
+  //     }, 500)
+  //   })
+  // .then((ramenList) => {
+  //   console.log(ramenList);
+  //   return new Promise((resolve) => {
+  //     ramenList += ', ' + '너구리'; // 삼양라면, 진라면, 신라면, 너구리
+  //     setTimeout(() => {
+  //       resolve(ramenList);
+  //     }, 500)
+  //   })
+  // })
+  // .then((ramenList) => {
+  //   console.log(ramenList);
+  // })
+  // })
+  
+  // 예제 4
+  // const addRamen = (name, prevName) => {
+  //   return new Promise((resolve) => {
+  //     setTimeout(() => {
+  //       let newName = '';
+  //       if(prevName) {
+  //         newName = `${prevName}, ${name}`;
+  //       }
+  //       else {
+  //         newName = name;
+  //       }
+  //       console.log(newName);
+  //       resolve(newName);
+  //     }, 500)
+  //   })
+  // }
+  // addRamen('삼양라면')
+  // // .then(ramenList => {
+  // //   addRamen('신라면', ramenList)
+  // // })
+  // // 아래 코드로 간략히 표현
+  // .then(ramenList => addRamen('신라면', ramenList)) // newName = '삼양라면', '신라면';
+  // .then(ramenList => addRamen('진라면', ramenList)) // newName = '삼양라면', '신라면', '진라면';
+  // .then(ramenList => addRamen('비빔면', ramenList)) // newName = '삼양라면', '신라면', '진라면', '비빔면';
+
+  new Promise((a) => {
+    a('data');
+  })
+  .then((b) => {
+    console.log(b)
+    return b;
+  })
+</script>

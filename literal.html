@@ -1,0 +1,53 @@
+<html>
+  <body>
+    구조 분해 할당
+  </body>
+</html>
+<script>
+  // 배열 분해하기
+  const array = ["Baram", "Lee", "jsh"];
+  // const firstName = array[0];
+  // const lastName = array[1];
+  // const initial = array[2];
+  const [firstName, lastName, initial] = array; // 위에 주석 코드를 간략히 표현
+  console.log("fisrtName :", firstName);
+  console.log("lastName :", lastName);
+  console.log("initial :", initial);
+
+  // 객체 분해하기
+  const option = {
+    title: "home",
+    width: 300,
+    height: 500
+  };
+
+  // const title = option.title;
+  // const width = option.width;
+  // const height = option.height;
+
+  const {title, width, height} = option; // 위에 주석 코드를 간략히 표현
+  console.log(title);
+  console.log(width);
+  console.log(height);
+
+  let family = {
+    grandmother: "Harrison",
+    sister: "Ethan",
+    brother: "Austin"
+  };
+
+  // const {grandmother, sister, brother} = family;
+  // const {grandmother, sister:baby, brother} = family; // 키값 sister의 이름을 baby로 바꿔서 사용
+  const {grandmother, sister:baby, brother, grandfather="할아버지"} = family; // 새로운 키값 grandfather를 추가
+  console.log(grandmother);
+  // console.log(sister);
+  console.log(brother);
+  console.log(baby);
+  console.log(grandfather);
+  console.log(family);
+
+
+  
+
+
+</script>

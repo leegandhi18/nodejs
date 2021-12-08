@@ -1,0 +1,34 @@
+<html>
+  <body>
+    콜백 함수 - 지옥
+  </body>
+</html>
+<script>
+  // const func = (name) => {
+  //   console.log(name);
+  // }
+
+  // setTimeout(콜백함수, 시간(ms), 콜백함수 인자1, 콜백함수 인자2 ...)
+  // setTimeout((name) => {
+  //   console.log(name);
+  // }, 1000, '이다운');
+  // setTimeout(func, 1000, '이다운'); // 위에 주석과 같은 표현 미리 위쪽에서 함수를 정의함
+  setTimeout((name) => {
+    let ramenList = name;
+    console.log(ramenList);
+    setTimeout((name) => {
+      ramenList += ',' + name; // ramenList = ramenList + ', ' + name;
+      console.log(ramenList);
+      setTimeout((name) => {
+        ramenList += ', ' + name
+        console.log(ramenList);
+        setTimeout((name) => {
+          ramenList += ', ' + name;
+          console.log(ramenList);
+        }, 500, '비빔면');
+      }, 500, '진라면');
+    }, 500, '신라면');
+  }, 500, '꼬꼬면');
+
+
+</script>
